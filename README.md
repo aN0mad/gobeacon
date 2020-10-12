@@ -20,3 +20,5 @@ On attacker:
 ```sh
 rlwrap nc -lvnp 9001
 ```
+### Creds
+Creds to this blogpost where I ripped the daemonization code from: https://socketloop.com/tutorials/golang-daemonizing-a-simple-web-server-process-example
